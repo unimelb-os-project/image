@@ -12,5 +12,5 @@ RUN apt-get -y update
 COPY --from=builder /opt/riscv /opt/riscv
 COPY --from=builder /qemu/build /qemu/build
 RUN echo 'export PATH=$PATH:/opt/riscv/bin:/qemu/build' >> ~/.bashrc
-RUN apt-get -y update && apt-get -y install libmpc-dev libpixman-1-dev vim make libglib2.0 && && rm -rf /var/lib/apt/lists/*
+RUN apt-get -y update && apt-get -y install libmpc-dev libpixman-1-dev vim make libglib2.0 && rm -rf /var/lib/apt/lists/*
 WORKDIR /os
