@@ -1,0 +1,4 @@
+Run Instructions
+git clone git@github.com:<org>/risc-v-os-basic.git
+git submodule update --init --recursive
+docker run -it --mount type=bind,source="$(pwd)"/risc-v-os-basic,target=/os ghcr.io/unimelb-os-project/image:main /bin/bash
